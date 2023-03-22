@@ -1,16 +1,15 @@
+import { RecipeList } from './RecipeList/RecipeList';
+import recipes from './recipes.json';
+import { GlobalStyle } from './GlobalStyle';
+import { Layout } from './Layout/Layout';
+import { PaymentWidget } from './PaymentWidget/PaymentWidget';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Layout>
+      <RecipeList items={recipes} />
+      <PaymentWidget />
+      <GlobalStyle />
+    </Layout>
   );
 };
